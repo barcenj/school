@@ -12,6 +12,12 @@ def encode(password):
     encode_pass = []
     for i in range(len(password)):
         string = int(password[i]) + 3
+        if string == 10:
+            string = 0
+        elif string == 11:
+            string = 1
+        elif string == 12:
+            string = 2
         string = f'{string}'
         encode_pass.append(string)
     encode_pass = ''.join(encode_pass)
@@ -24,6 +30,7 @@ if __name__ == '__main__':
         op = input('Please enter an option: ')
 
         if op == '1':
+            password = input('Please enter your password to encode: ')
             encode(password)
             print('Your password has been encoded and stored!')
             print()
