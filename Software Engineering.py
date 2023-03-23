@@ -23,6 +23,18 @@ def encode(password):
     encode_pass = ''.join(encode_pass)
     return encode_pass
 
+def decode(encode_pass):        # added decode function (caitlin guiang)
+    list(encode_pass)
+    orig_pass = ''
+    for element in encode_pass:
+        element = int(element)
+        if element > 2:
+            element -= 3
+        elif element <= 2:
+            element += 7
+        orig_pass += str(element)
+    return orig_pass
+
 if __name__ == '__main__':
     password = None
     while True:
