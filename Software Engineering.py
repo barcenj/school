@@ -48,7 +48,7 @@ if __name__ == '__main__':
             print()
 
         elif op == '2':
-            orig_pass = decode(encode(password))        # implementing decode function
+            orig_pass = decode(encode(password))        # implementing decode function into main
             print(f'The encoded password is {encode(password)}, and the original password is {orig_pass}')
 
         elif op == '3':
